@@ -11,11 +11,12 @@ export class Parser {
     this.#reader.init(input);
     this.#lookahead = this.#reader.getNext();
 
-    return this.Roster();
+    return this.ChargeList();
   }
 
-  #consume() {
+  #consume(type) {
     const token = this.#lookahead;
+
   }
 
   ChargeList() {
@@ -26,6 +27,6 @@ export class Parser {
   }
 
   Charge() {
-
+    
   }
 }

@@ -41,6 +41,21 @@ export class Reader {
         value: number
       };
     }
+
+    // String:
+    if(current[0] === ' ') {
+      let terminator = current[0];
+      let s = '';
+      do {
+        s += current[this._cursor++];
+      } while((current[this._cursor] !== terminator && !this.isEOF()));
+      s += current[this._cursor++];
+      return {
+        type: 'STRING',
+        value: s,
+      };
+    }
+
     return null;
   }
 }
