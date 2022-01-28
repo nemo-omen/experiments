@@ -1,0 +1,5 @@
+packages:
+  - 'masm-interpreter/**'
+  - 'masm-parser/**'
+  - 'jaillog-parser/**'
+  - '!**/__tests__/**'
